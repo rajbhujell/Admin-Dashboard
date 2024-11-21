@@ -1,5 +1,5 @@
 .container {
-  background-image: url("/background.jpg");
+  background-color: var(--bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -39,7 +39,6 @@
   padding: 15px 20px;
   background: var(--bg);
   border-radius: 7.5px;
-  background-color: rgba(168, 0, 126, 0.2);
   border: 1.5px solid rgba(255, 255, 255, 0.05);
   transition: all 0.4s ease-in-out;
 }
@@ -55,7 +54,7 @@
 
 .form button {
   width: 100%;
-  background-color: rgb(187, 11, 187);
+  background-color: rgb(35, 122, 235);
   padding: 15px;
   border-radius: 8px;
   transition: all 0.4s ease-in-out;
@@ -98,4 +97,35 @@
   color: rgba(255, 85, 85, 1);
   font-size: 0.9rem;
   text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
 }

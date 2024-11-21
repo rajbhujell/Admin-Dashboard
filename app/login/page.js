@@ -3,19 +3,21 @@
 import { useState } from "react";
 import styles from "@app/ui/login/login.module.css";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
   });
+  const [modalVisible, setModalVisible] = useState(false);
+  const [userName, setUserName] = useState("");
 
   const router = useRouter();
+  const { data: session } = useSession();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,7 +55,10 @@ const Login = () => {
     try {
       setLoading(true);
       const res = await signIn("google", { callbackUrl: "/dashboard" });
-      if (!res?.ok) {
+      if (res?.ok) {
+        setModalVisible(true);
+        setUserName(res?.profile?.name || "User"); // Use fallback if name is unavailable
+      } else {
         setError("Google login failed");
       }
     } catch (err) {
@@ -61,6 +66,10 @@ const Login = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
   };
 
   return (
@@ -97,6 +106,17 @@ const Login = () => {
           <FcGoogle size={20} /> Continue with Google
         </button>
       </form>
+
+      {modalVisible && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <button className={styles.closeButton} onClick={closeModal}>
+              &times;
+            </button>
+            <h2>Welcome, {userName}!</h2>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,169 +1,77 @@
-/* General body styles */
+/* General Body Style */
 body {
-  background-image: url("/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  color: #ffffff;
   font-family: "Poppins", sans-serif;
+  color: #333;
 }
 
-/* Welcome section styles */
-.welcome h1 {
-  font-size: 2.5em;
-  font-weight: bold;
+/* Container */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+/* Title and Subtitle */
+.welcome h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .welcome p {
-  font-size: 1em;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  margin-top: 0;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-/* Container styling */
-.container {
-  width: 400px;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  background: rgba(12, 12, 12, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Button styling */
+/* Buttons */
 .button {
-  background-color: #bb0bbb;
-  border: none;
-  border-radius: 8px;
-  color: white;
+  width: 100%;
+  padding: 12px 0;
   font-size: 1rem;
-  font-weight: bold;
-  padding: 12px 20px;
+  font-weight: 500;
+  color: white;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(187, 11, 187, 0.6);
+  background-color: #3b7cc4;
+  box-shadow: 0 2px 6px rgba(74, 144, 226, 0.4);
 }
 
 .dashboard {
+  opacity: 0.7;
   cursor: not-allowed;
-  opacity: 0.6;
 }
 
-.dashboard:hover {
-  box-shadow: none;
-  transform: none;
-}
-
-/* Connect text styling */
+/* Footer Section */
 .connect {
-  background: rgba(12, 12, 12, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 10px 20px;
-  width: fit-content;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #555;
 }
 
-/* Name hover effect */
 .name {
-  --offset: 10px;
-  --border-size: 2px;
-  display: inline-block;
-  position: relative;
-  padding: 0.5em 1em;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  transition: all 0.4s ease;
+  font-weight: 600;
+  color: #4a90e2;
+  transition: color 0.3s ease;
 }
 
 .name:hover {
-  color: #bb0bbb;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.name__horizontal,
-.name__vertical {
-  position: absolute;
-  transition: transform 0.8s ease;
-}
-
-.name__horizontal {
-  border-top: var(--border-size) solid currentcolor;
-  border-bottom: var(--border-size) solid currentcolor;
-}
-
-.name__vertical {
-  border-left: var(--border-size) solid currentcolor;
-  border-right: var(--border-size) solid currentcolor;
-}
-
-.name:hover .name__horizontal {
-  transform: scaleX(0);
-}
-
-.name:hover .name__vertical {
-  transform: scaleY(0);
-}
-
-/* Spinner overlay */
-.spinner-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Keeps the spinner on top */
-}
-
-.spinner {
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  border-left-color: #bb0bbb;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  color: #3b7cc4;
 }
