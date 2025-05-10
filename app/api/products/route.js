@@ -1,5 +1,5 @@
 // app/api/products/route.js
-import clientPromise from "../../../lib/mongodb";
+import clientPromise from "../../../lib/monogdb";
 
 export async function GET(request) {
   const client = await clientPromise;
