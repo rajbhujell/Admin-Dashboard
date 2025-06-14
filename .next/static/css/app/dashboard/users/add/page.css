@@ -1,0 +1,63 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/ui/dashboard/users/addUsers/addUsers.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************/
+.addUsers_container__MGCWf {
+  background-color: var(--bgSoft);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.addUsers_form__oTrkm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.addUsers_form__oTrkm input,
+.addUsers_form__oTrkm textarea,
+.addUsers_form__oTrkm select {
+  padding: 30px;
+  background: var(--bg);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 2px solid #2e374a;
+}
+
+.addUsers_form__oTrkm input:focus,
+.addUsers_form__oTrkm textarea:focus {
+  outline: none;
+}
+
+.addUsers_form__oTrkm input {
+  width: 45%;
+}
+
+.addUsers_form__oTrkm select {
+  width: 45%;
+}
+
+.addUsers_form__oTrkm textarea,
+.addUsers_form__oTrkm button {
+  width: 100%;
+}
+
+.addUsers_form__oTrkm button {
+  background-color: teal;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Hanok daile shikhako */
+.addUsers_form__oTrkm input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.addUsers_form__oTrkm input::-webkit-outer-spin-button,
+.addUsers_form__oTrkm input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+

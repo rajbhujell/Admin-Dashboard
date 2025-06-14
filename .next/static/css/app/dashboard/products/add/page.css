@@ -1,0 +1,67 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/ui/dashboard/products/addProducts/addProducts.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************/
+.addProducts_container__xOxu4 {
+  background-color: var(--bgSoft);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.addProducts_form__UFdXh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.addProducts_form__UFdXh input,
+.addProducts_form__UFdXh textarea,
+.addProducts_form__UFdXh select {
+  padding: 30px;
+  background: var(--bg);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 2px solid #2e374a;
+}
+
+.addProducts_form__UFdXh input:focus,
+.addProducts_form__UFdXh textarea:focus {
+  outline: none;
+}
+
+.addProducts_form__UFdXh input {
+  width: 45%;
+}
+
+.addProducts_form__UFdXh select {
+  width: 45%;
+}
+
+.addProducts_form__UFdXh textarea,
+.addProducts_form__UFdXh button {
+  width: 100%;
+}
+
+.addProducts_form__UFdXh button {
+  background-color: teal;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Hanok daile shikhako */
+.addProducts_form__UFdXh input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.addProducts_form__UFdXh input::-webkit-outer-spin-button,
+.addProducts_form__UFdXh input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.addProducts_form__UFdXh select:focus {
+  outline: none;
+}
+
